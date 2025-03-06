@@ -1,0 +1,7 @@
+C:\Users\Administrator\Desktop\dotNet\Tues\Tues\bin\Debug\Tues.exe.config
+C:\Users\Administrator\Desktop\dotNet\Tues\Tues\bin\Debug\Tues.exe
+C:\Users\Administrator\Desktop\dotNet\Tues\Tues\bin\Debug\Tues.pdb
+C:\Users\Administrator\Desktop\dotNet\Tues\Tues\obj\Debug\Tues.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\dotNet\Tues\Tues\obj\Debug\Tues.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\dotNet\Tues\Tues\obj\Debug\Tues.exe
+C:\Users\Administrator\Desktop\dotNet\Tues\Tues\obj\Debug\Tues.pdb
