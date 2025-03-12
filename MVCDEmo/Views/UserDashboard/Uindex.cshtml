@@ -1,0 +1,82 @@
+﻿@using FooddeliveryApp;
+@model UserDashboardViewModel
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<body>
+    <h3>User Dashboard</h3>
+    <h3>List Orders</h3>
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>User ID</th>
+            <th>Restaurant ID</th>
+            <th>Order Status</th>
+        </tr>
+        <!-- Example row, replace with dynamic content -->
+        <tr>
+            <td>1</td>
+            <td>101</td>
+            <td>201</td>
+            <td>Completed</td>
+        </tr>
+    </table>
+    <br />
+    <!-- List Restaurants-->
+
+    <a href="/AdminDashBoard/AddRestaurant">Add New Restaurant</a>
+    <h4>Restaurant List:</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Restaurant Name
+                </th>
+                <th>
+                    Restaurant Location
+                </th>
+                <th>
+                    Restaurant Owner
+                </th>
+                <th>
+                    Action-Update
+                </th>
+                <th>
+                    Action-Delete
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var res in Model.restaurants)
+            {
+                <tr>
+                    <td>
+                        @res.rname
+                    </td>
+                    <td>
+                        @res.rlocation
+                    </td>
+                    <td>
+                        @res.ownerid
+                    </td>
+                    <td>
+                        <a href="/AdminDashBoard/UpdateRestaurant?id=@res.resid">Update</a>
+                    </td>
+                    <td>
+                        <a href="/AdminDashBoard/DeleteRestaurant?id=@res.resid">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <nav>
+        <ul>
+            <li><a href="AddOrders.html">Add Orders</a></li>
+            <li><a href="SearchRestaurantByLocation.html">Search Restaurant by Location</a></li>
+        </ul>
+    </nav>
+</body>

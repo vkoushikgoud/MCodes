@@ -1,0 +1,38 @@
+﻿@using FooddeliveryApp;
+@model AdminDashBoardViewmodel
+
+
+<h2>Add New User</h2>
+
+    <h3>
+        Add USer
+    </h3>
+<form  method="post">
+        <div>
+        <input type="text" id="uname" name="users.uname" placeholder="Enter Name">
+        </div>
+        <div>
+        <input type="text" id="uemail" name="users.email" placeholder="Enter Email">
+        </div>
+        <div>
+        <input type="password" id="upwd" name="users.password" placeholder="Enter Password">
+        </div>
+        <div>
+        <select type="urole" name="users.roledal">
+                <option value="admin">admin</option>
+                <option value="user">user</option>
+                <option value="owner">owner</option>
+            </select>
+        </div>
+        <div>
+        <select type="ulocation" name="users.ulocation">
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Bangalore">Bangalore</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit"></inputbutton>
+        </div>
+</form>
+

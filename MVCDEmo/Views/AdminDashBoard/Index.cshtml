@@ -1,0 +1,163 @@
+﻿@using FooddeliveryApp;
+@model AdminDashBoardViewmodel
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h3>Admin DashBoard: </h3>
+<hr />
+<a href="/AdminDashBoard/Adduser">Add New User</a>
+<h4>User List:</h4>
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Role
+            </th>
+            <th>
+                Location
+            </th>
+            
+            <th>
+                Action-Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (usersDTO usr in Model.users)
+        {
+            <tr>
+                <td>
+                    @usr.uname
+                </td>
+                <td>
+                    @usr.password
+                </td>
+                <td>
+                    @usr.ulocation
+                </td>
+                
+                <td>
+                    <a href="/AdminDashBoard/DeleteUser?id=@usr.userid">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<!-- List Restaurants-->
+
+<a href="/AdminDashBoard/AddRestaurant">Add New Restaurant</a>
+
+<h4>Restaurant List:</h4>
+<table>
+    <thead>
+        <tr>
+            <th>
+                Restaurant Name
+            </th>
+            <th>
+                Restaurant Location
+            </th>
+            <th>
+                Restaurant Owner
+            </th>
+            <th>
+                Action-Update
+            </th>
+            <th>
+                Action-Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (restaurantDTO res in Model.restaurants)
+        {
+            <tr>
+                <td>
+                    @res.rname
+                </td>
+                <td>
+                    @res.rlocation
+                </td>
+                <td>
+                    @res.ownerid
+                </td>
+                <td>
+                    <a href="/AdminDashBoard/UpdateRestaurant?id=@res.resid">Update</a>
+                </td>
+                <td>
+                    <a href="/AdminDashBoard/DeleteRestaurant?id=@res.resid">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<!-- List Menu-->
+
+<a href="AddMenu.html">Add Menu</a>
+<h4>Menu List:</h4>
+<table>
+    <thead>
+        <tr>
+            <th>
+                Restaurant Name
+            </th>
+            <th>
+                Item Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Action-Update
+            </th>
+            <th>
+                Action-Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Meghana Foods
+            </td>
+            <td>
+                Biryani
+            </td>
+            <td>
+                300
+            </td>
+            <td>
+                <input type="button" value="UPDATE" id="mupd" name="mupd" />
+            </td>
+            <td>
+                <input type="button" value="DELETE" id="mdel" name="mdel" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nagarjuna
+            </td>
+            <td>
+                Veg Meals
+            </td>
+            <td>
+                350
+            </td>
+            <td>
+                <input type="button" value="UPDATE" id="mupd" name="mupd" />
+            </td>
+            <td>
+                <input type="button" value="DELETE" id="mdel" name="mdel" />
+            </td>
+        </tr>
+    </tbody>
+</table>
